@@ -125,9 +125,88 @@
   .section-note {
     margin-top: 24px;
   }
+
+  /* Mobile/tablet cards: force enough vertical space for full titles and loglines. */
+  .project-featured .project-carousel,
+  .project-featured .carousel-track {
+    min-height: 560px !important;
+  }
+
+  .project-featured .carousel-track {
+    aspect-ratio: auto !important;
+  }
+
+  .project-featured .carousel-slide::after,
+  .project-featured .santa-winter-slide::after {
+    background: linear-gradient(
+      180deg,
+      rgba(8, 9, 15, .03) 0%,
+      rgba(8, 9, 15, .10) 24%,
+      rgba(8, 9, 15, .48) 48%,
+      rgba(8, 9, 15, .88) 72%,
+      rgba(8, 9, 15, .98) 100%
+    ) !important;
+  }
+
+  .project-featured .art-overlay-inner,
+  .project-pad-thai .art-overlay-inner,
+  .project-coming-second .art-overlay-inner,
+  .project-powdered .art-overlay-inner,
+  .santa-winter-slide .art-overlay-inner {
+    left: 6% !important;
+    right: 6% !important;
+    top: auto !important;
+    bottom: 12% !important;
+    width: auto !important;
+    max-width: none !important;
+    text-align: left !important;
+  }
+
+  .project-featured .art-overlay .art-overlay-meta {
+    font-size: .67rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 7px !important;
+    letter-spacing: .10em !important;
+  }
+
+  .project-featured .art-overlay h3 {
+    font-size: 2rem !important;
+    line-height: .96 !important;
+    margin: 0 0 10px !important;
+  }
+
+  .project-powdered .art-overlay h3::after {
+    font-size: 2rem !important;
+    line-height: .96 !important;
+  }
+
+  .project-space-rock .art-overlay-inner > p:last-child::after,
+  .project-santa .art-overlay-inner > p:last-child::after,
+  .project-pad-thai .art-overlay-inner > p:last-child::after,
+  .project-coming-second .art-overlay-inner > p:last-child::after,
+  .project-powdered .art-overlay-inner > p:last-child::after {
+    display: block;
+    font-size: .9rem !important;
+    line-height: 1.34 !important;
+    font-weight: 500;
+  }
+
+  /* Put arrows high enough that they never obscure titles or loglines. */
+  .project-featured .carousel-arrow {
+    top: 30% !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.6rem !important;
+  }
+
+  .project-featured .carousel-prev { left: 10px !important; }
+  .project-featured .carousel-next { right: 10px !important; }
+
+  .project-featured .carousel-dots {
+    bottom: 10px !important;
+  }
 }
 
-/* Mobile project cards: prioritise readability over desktop-style overlay placement */
 @media (max-width: 560px) {
   .hero .eyebrow {
     font-size: 1rem;
@@ -137,53 +216,17 @@
     font-size: 1.08rem;
   }
 
-  /* Taller portrait cards give the longest loglines enough room */
-  .carousel-track {
-    aspect-ratio: 2 / 3;
-    min-height: 560px;
+  .project-featured .project-carousel,
+  .project-featured .carousel-track {
+    min-height: 610px !important;
   }
 
-  .carousel-slide::after,
-  .santa-winter-slide::after {
-    background: linear-gradient(
-      180deg,
-      rgba(8, 9, 15, .04) 0%,
-      rgba(8, 9, 15, .12) 28%,
-      rgba(8, 9, 15, .56) 55%,
-      rgba(8, 9, 15, .90) 78%,
-      rgba(8, 9, 15, .97) 100%
-    ) !important;
-  }
-
-  .art-overlay-inner,
+  .project-featured .art-overlay-inner,
   .project-pad-thai .art-overlay-inner,
   .project-coming-second .art-overlay-inner,
   .project-powdered .art-overlay-inner,
   .santa-winter-slide .art-overlay-inner {
-    left: 6% !important;
-    right: 6% !important;
-    top: auto !important;
-    bottom: 9% !important;
-    width: auto !important;
-    text-align: left !important;
-  }
-
-  .art-overlay .art-overlay-meta {
-    font-size: .64rem;
-    line-height: 1.25;
-    margin-bottom: 7px;
-    letter-spacing: .10em;
-  }
-
-  .art-overlay h3 {
-    font-size: 1.9rem;
-    line-height: .96;
-    margin: 0 0 10px;
-  }
-
-  .project-powdered .art-overlay h3::after {
-    font-size: 1.9rem;
-    line-height: .96;
+    bottom: 11% !important;
   }
 
   .project-space-rock .art-overlay-inner > p:last-child::after,
@@ -191,23 +234,7 @@
   .project-pad-thai .art-overlay-inner > p:last-child::after,
   .project-coming-second .art-overlay-inner > p:last-child::after,
   .project-powdered .art-overlay-inner > p:last-child::after {
-    font-size: .88rem;
-    line-height: 1.38;
-    font-weight: 500;
-  }
-
-  /* Keep navigation controls away from the copy */
-  .carousel-arrow {
-    top: 30% !important;
-    width: 36px;
-    height: 36px;
-    font-size: 1.6rem;
-  }
-
-  .carousel-prev { left: 10px; }
-  .carousel-next { right: 10px; }
-
-  .carousel-dots {
-    bottom: 8px;
+    font-size: .86rem !important;
+    line-height: 1.32 !important;
   }
 }
