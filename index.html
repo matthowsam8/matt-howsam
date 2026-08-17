@@ -11,6 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="overrides.css" />
+
+  <style>
+    .about-portrait { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 22px; display: block; }
+    .about-copy p { color: #000 !important; }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -31,7 +36,7 @@
         <h1 class="name-title">Matt Howsam</h1>
         <p class="hero-tagline">Stories for anyone who’s ever felt out of place.</p>
         <p class="manifesto-inline"></p>
-        <div class="hero-actions">
+<div class="hero-actions">
           <a class="button button-primary" href="#work">Explore the work</a>
           <a class="button button-ghost" href="#contact">Get in touch</a>
         </div>
@@ -58,7 +63,7 @@
       </div>
 
       <article class="project project-space-rock project-featured">
-        <div class="project-carousel" data-carousel>
+<div class="project-carousel" data-carousel>
           <div class="carousel-track">
             <figure class="carousel-slide is-active">
               <img src="assets/space-rock-cafe.jpg" alt="Tales from the Space Rock Cafe — the lopsided cafe standing on a floating rock in space." />
@@ -93,7 +98,7 @@
       </article>
 
       <article class="project project-santa project-featured">
-        <div class="project-carousel" data-carousel>
+<div class="project-carousel" data-carousel>
           <div class="carousel-track">
             <figure class="carousel-slide is-active">
               <img src="assets/long-live-santa-2.jpg" alt="A ceremonial gingerbread cathedral interior with a Santa coronation, detailed stained-glass windows, and the stern head elf presiding." />
@@ -128,7 +133,7 @@
       </article>
 
       <article class="project project-pad-thai project-featured">
-        <div class="project-carousel" data-carousel>
+<div class="project-carousel" data-carousel>
           <div class="carousel-track">
             <figure class="carousel-slide is-active">
               <img src="assets/pad-thai-1.jpg" alt="A stressed monitor lizard delivery rider on a blue scooter in Lumpini Park, carrying a heavy stack of ingredients and parcels." />
@@ -163,7 +168,7 @@
       </article>
 
       <article class="project project-coming-second project-featured">
-        <div class="project-carousel" data-carousel>
+<div class="project-carousel" data-carousel>
           <div class="carousel-track">
             <figure class="carousel-slide is-active">
               <img src="assets/coming-second-1.jpg" alt="An elderly woman in a pink dress races away from a care home on a mobility scooter, followed by an elderly man on another scooter." />
@@ -199,7 +204,7 @@
       </article>
 
       <article class="project project-powdered project-featured">
-        <div class="project-carousel" data-carousel>
+<div class="project-carousel" data-carousel>
           <div class="carousel-track">
             <figure class="carousel-slide is-active">
               <img src="assets/powdered-and-dancing-1.jpg" alt="Two young men seated together in a crowded tea room in a black-and-white period image." />
@@ -237,9 +242,7 @@
 
     <section id="about" class="section about">
       <div class="about-card">
-        <div class="portrait-placeholder" role="img" aria-label="Portrait placeholder for Matt Howsam">
-          <span>YOUR<br>PHOTO</span>
-        </div>
+        <img class="about-portrait" src="assets/matt-howsam-portrait.svg" alt="Portrait of Matt Howsam" />
         <div class="about-copy">
           <p class="section-kicker">About</p>
           <h2>Matt Howsam</h2>
