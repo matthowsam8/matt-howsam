@@ -17,19 +17,6 @@
   grid-template-columns: 1fr 1fr;
   gap: 70px;
   align-items: end;
-  position: relative;
-  padding-bottom: 34px;
-}
-
-.section-heading::after {
-  content: "Concept artwork shown is AI-generated.";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  font-size: .86rem;
-  line-height: 1.4;
-  color: #000;
-  opacity: .65;
 }
 
 .section-note {
@@ -54,7 +41,7 @@
   opacity: .96;
 }
 
-/* Rename Powdered and Dancing visually to Where We Left Off */
+/* Where We Left Off title styling */
 .project-powdered .art-overlay h3 {
   font-size: 0;
 }
@@ -92,7 +79,6 @@
 @media (max-width: 850px) {
   .section-heading {
     display: block;
-    padding-bottom: 34px;
   }
 
   .section-note {
