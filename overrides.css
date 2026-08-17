@@ -137,18 +137,21 @@
     font-size: 1.08rem;
   }
 
+  /* Taller portrait cards give the longest loglines enough room */
   .carousel-track {
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 2 / 3;
+    min-height: 560px;
   }
 
   .carousel-slide::after,
   .santa-winter-slide::after {
     background: linear-gradient(
       180deg,
-      rgba(8, 9, 15, .08) 0%,
-      rgba(8, 9, 15, .18) 35%,
-      rgba(8, 9, 15, .72) 68%,
-      rgba(8, 9, 15, .92) 100%
+      rgba(8, 9, 15, .04) 0%,
+      rgba(8, 9, 15, .12) 28%,
+      rgba(8, 9, 15, .56) 55%,
+      rgba(8, 9, 15, .90) 78%,
+      rgba(8, 9, 15, .97) 100%
     ) !important;
   }
 
@@ -160,26 +163,26 @@
     left: 6% !important;
     right: 6% !important;
     top: auto !important;
-    bottom: 8% !important;
+    bottom: 9% !important;
     width: auto !important;
     text-align: left !important;
   }
 
   .art-overlay .art-overlay-meta {
-    font-size: .66rem;
+    font-size: .64rem;
     line-height: 1.25;
-    margin-bottom: 8px;
-    letter-spacing: .11em;
+    margin-bottom: 7px;
+    letter-spacing: .10em;
   }
 
   .art-overlay h3 {
-    font-size: 2rem;
+    font-size: 1.9rem;
     line-height: .96;
-    margin: 0 0 12px;
+    margin: 0 0 10px;
   }
 
   .project-powdered .art-overlay h3::after {
-    font-size: 2rem;
+    font-size: 1.9rem;
     line-height: .96;
   }
 
@@ -188,12 +191,23 @@
   .project-pad-thai .art-overlay-inner > p:last-child::after,
   .project-coming-second .art-overlay-inner > p:last-child::after,
   .project-powdered .art-overlay-inner > p:last-child::after {
-    font-size: .9rem;
-    line-height: 1.42;
+    font-size: .88rem;
+    line-height: 1.38;
     font-weight: 500;
   }
 
+  /* Keep navigation controls away from the copy */
+  .carousel-arrow {
+    top: 30% !important;
+    width: 36px;
+    height: 36px;
+    font-size: 1.6rem;
+  }
+
+  .carousel-prev { left: 10px; }
+  .carousel-next { right: 10px; }
+
   .carousel-dots {
-    bottom: 10px;
+    bottom: 8px;
   }
 }
