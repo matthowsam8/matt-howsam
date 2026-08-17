@@ -17,6 +17,19 @@
   grid-template-columns: 1fr 1fr;
   gap: 70px;
   align-items: end;
+  position: relative;
+  padding-bottom: 34px;
+}
+
+.section-heading::after {
+  content: "Concept artwork shown is AI-generated.";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: .86rem;
+  line-height: 1.4;
+  color: #000;
+  opacity: .65;
 }
 
 .section-note {
@@ -41,9 +54,45 @@
   opacity: .96;
 }
 
+/* Rename Powdered and Dancing visually to Where We Left Off */
+.project-powdered .art-overlay h3 {
+  font-size: 0;
+}
+
+.project-powdered .art-overlay h3::after {
+  content: "Where We\A Left Off";
+  white-space: pre;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.5rem, 4.8vw, 4.8rem);
+  line-height: .92;
+  letter-spacing: -.05em;
+  font-weight: 600;
+}
+
+/* Use the original high-resolution portrait, scaled to fit rather than cropped */
+.about-portrait {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: contain !important;
+  object-position: center center !important;
+  border-radius: 22px;
+  display: block;
+  background: var(--paper-2);
+  content: url("assets/IMG_8889.jpeg");
+}
+
+/* Biography copy: black and no bold emphasis */
+.about-copy p,
+.about-copy strong,
+.about-copy b {
+  color: #000 !important;
+  font-weight: 400 !important;
+}
+
 @media (max-width: 850px) {
   .section-heading {
     display: block;
+    padding-bottom: 34px;
   }
 
   .section-note {
@@ -64,5 +113,9 @@
     font-size: .68rem;
     margin-bottom: 10px;
     letter-spacing: .12em;
+  }
+
+  .project-powdered .art-overlay h3::after {
+    font-size: 2rem;
   }
 }
