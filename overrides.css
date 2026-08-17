@@ -127,6 +127,7 @@
   }
 }
 
+/* Mobile project cards: prioritise readability over desktop-style overlay placement */
 @media (max-width: 560px) {
   .hero .eyebrow {
     font-size: 1rem;
@@ -136,14 +137,50 @@
     font-size: 1.08rem;
   }
 
+  .carousel-track {
+    aspect-ratio: 3 / 4;
+  }
+
+  .carousel-slide::after,
+  .santa-winter-slide::after {
+    background: linear-gradient(
+      180deg,
+      rgba(8, 9, 15, .08) 0%,
+      rgba(8, 9, 15, .18) 35%,
+      rgba(8, 9, 15, .72) 68%,
+      rgba(8, 9, 15, .92) 100%
+    ) !important;
+  }
+
+  .art-overlay-inner,
+  .project-pad-thai .art-overlay-inner,
+  .project-coming-second .art-overlay-inner,
+  .project-powdered .art-overlay-inner,
+  .santa-winter-slide .art-overlay-inner {
+    left: 6% !important;
+    right: 6% !important;
+    top: auto !important;
+    bottom: 8% !important;
+    width: auto !important;
+    text-align: left !important;
+  }
+
   .art-overlay .art-overlay-meta {
-    font-size: .68rem;
-    margin-bottom: 10px;
-    letter-spacing: .12em;
+    font-size: .66rem;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    letter-spacing: .11em;
+  }
+
+  .art-overlay h3 {
+    font-size: 2rem;
+    line-height: .96;
+    margin: 0 0 12px;
   }
 
   .project-powdered .art-overlay h3::after {
     font-size: 2rem;
+    line-height: .96;
   }
 
   .project-space-rock .art-overlay-inner > p:last-child::after,
@@ -151,7 +188,12 @@
   .project-pad-thai .art-overlay-inner > p:last-child::after,
   .project-coming-second .art-overlay-inner > p:last-child::after,
   .project-powdered .art-overlay-inner > p:last-child::after {
-    font-size: .82rem;
-    line-height: 1.4;
+    font-size: .9rem;
+    line-height: 1.42;
+    font-weight: 500;
+  }
+
+  .carousel-dots {
+    bottom: 10px;
   }
 }
