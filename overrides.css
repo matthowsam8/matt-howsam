@@ -56,6 +56,20 @@
   font-weight: 600;
 }
 
+/* Where We Left Off teaser */
+.project-powdered .art-overlay-inner > p:last-child {
+  font-size: 0;
+}
+
+.project-powdered .art-overlay-inner > p:last-child::after {
+  content: "A love story about one moment of fear — and a lifetime spent trying to make it right.";
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: clamp(.92rem, 1.25vw, 1.1rem);
+  line-height: 1.48;
+  font-weight: 500;
+  color: #fff;
+}
+
 /* Use the original high-resolution portrait, scaled to fit rather than cropped */
 .about-portrait {
   width: 100%;
@@ -103,5 +117,10 @@
 
   .project-powdered .art-overlay h3::after {
     font-size: 2rem;
+  }
+
+  .project-powdered .art-overlay-inner > p:last-child::after {
+    font-size: .82rem;
+    line-height: 1.4;
   }
 }
