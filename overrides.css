@@ -56,18 +56,45 @@
   font-weight: 600;
 }
 
-/* Where We Left Off teaser */
+/* Locked project loglines */
+.project-space-rock .art-overlay-inner > p:last-child,
+.project-santa .art-overlay-inner > p:last-child,
+.project-pad-thai .art-overlay-inner > p:last-child,
+.project-coming-second .art-overlay-inner > p:last-child,
 .project-powdered .art-overlay-inner > p:last-child {
   font-size: 0;
 }
 
+.project-space-rock .art-overlay-inner > p:last-child::after,
+.project-santa .art-overlay-inner > p:last-child::after,
+.project-pad-thai .art-overlay-inner > p:last-child::after,
+.project-coming-second .art-overlay-inner > p:last-child::after,
 .project-powdered .art-overlay-inner > p:last-child::after {
-  content: "A love story about one moment of fear — and a lifetime spent trying to make it right.";
   font-family: "DM Sans", system-ui, sans-serif;
   font-size: clamp(.92rem, 1.25vw, 1.1rem);
   line-height: 1.48;
   font-weight: 500;
   color: #fff;
+}
+
+.project-space-rock .art-overlay-inner > p:last-child::after {
+  content: "Exiled from the only world he has known, a fearful alien finds friendship through the art of tea and begins creating a cafe among the stars.";
+}
+
+.project-santa .art-overlay-inner > p:last-child::after {
+  content: "When Santa decides he no longer wants to be Santa, his attempt to escape the role throws the North Pole into chaos and forces his family to confront what the tradition has cost them.";
+}
+
+.project-pad-thai .art-overlay-inner > p:last-child::after {
+  content: "Two lonely lives cross every day in Bangkok without ever truly meeting, until a shared love of cooking begins to draw them together across the water.";
+}
+
+.project-coming-second .art-overlay-inner > p:last-child::after {
+  content: "After a lifetime spent almost winning, two ageing ballroom partners seize one final chance to prove they are not finished yet.";
+}
+
+.project-powdered .art-overlay-inner > p:last-child::after {
+  content: "After the man he loves is arrested for gross indecency, a young Londoner is haunted by his failure to intervene and spends years trying to find him again.";
 }
 
 /* Use the original high-resolution portrait, scaled to fit rather than cropped */
@@ -119,6 +146,10 @@
     font-size: 2rem;
   }
 
+  .project-space-rock .art-overlay-inner > p:last-child::after,
+  .project-santa .art-overlay-inner > p:last-child::after,
+  .project-pad-thai .art-overlay-inner > p:last-child::after,
+  .project-coming-second .art-overlay-inner > p:last-child::after,
   .project-powdered .art-overlay-inner > p:last-child::after {
     font-size: .82rem;
     line-height: 1.4;
