@@ -175,6 +175,11 @@
     margin: 0 0 10px !important;
   }
 
+  /* Keep the original Where We Left Off h3 text hidden; the ::after supplies the styled title. */
+  .project-powdered .art-overlay h3 {
+    font-size: 0 !important;
+  }
+
   .project-powdered .art-overlay h3::after {
     font-size: 2rem !important;
     line-height: .96 !important;
