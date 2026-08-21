@@ -11,6 +11,11 @@
   color: #000;
 }
 
+/* Add the final creative manifesto thought without altering the existing layout. */
+.intro-grid > p::after {
+  content: " I write because I have ideas I fall in love with. Those become stories I want to share. I hope my projects capture your imagination.";
+}
+
 /* Align the work-heading note to the same right-hand column as the intro paragraph */
 .section-heading {
   display: grid;
